@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFF1A3D828DCCE7900CA10DE /* ReactionTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3D728DCCE7900CA10DE /* ReactionTimerApp.swift */; };
+		DFF1A3DA28DCCE7900CA10DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3D928DCCE7900CA10DE /* ContentView.swift */; };
+		DFF1A3DC28DCCE7D00CA10DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF1A3DB28DCCE7D00CA10DE /* Assets.xcassets */; };
+		DFF1A3DF28DCCE7D00CA10DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF1A3DE28DCCE7D00CA10DE /* Preview Assets.xcassets */; };
+		DFF1A3E928DCCE7E00CA10DE /* ReactionTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3E828DCCE7E00CA10DE /* ReactionTimerTests.swift */; };
+		DFF1A3F328DCCE7E00CA10DE /* ReactionTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3F228DCCE7E00CA10DE /* ReactionTimerUITests.swift */; };
+		DFF1A3F528DCCE7E00CA10DE /* ReactionTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3F428DCCE7E00CA10DE /* ReactionTimerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFF1A3E528DCCE7E00CA10DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFF1A3CC28DCCE7900CA10DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFF1A3D328DCCE7900CA10DE;
+			remoteInfo = ReactionTimer;
+		};
+		DFF1A3EF28DCCE7E00CA10DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFF1A3CC28DCCE7900CA10DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFF1A3D328DCCE7900CA10DE;
+			remoteInfo = ReactionTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFF1A3D428DCCE7900CA10DE /* ReactionTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactionTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF1A3D728DCCE7900CA10DE /* ReactionTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTimerApp.swift; sourceTree = "<group>"; };
+		DFF1A3D928DCCE7900CA10DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFF1A3DB28DCCE7D00CA10DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFF1A3DE28DCCE7D00CA10DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFF1A3E428DCCE7E00CA10DE /* ReactionTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactionTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF1A3E828DCCE7E00CA10DE /* ReactionTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTimerTests.swift; sourceTree = "<group>"; };
+		DFF1A3EE28DCCE7E00CA10DE /* ReactionTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactionTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF1A3F228DCCE7E00CA10DE /* ReactionTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTimerUITests.swift; sourceTree = "<group>"; };
+		DFF1A3F428DCCE7E00CA10DE /* ReactionTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFF1A3D128DCCE7900CA10DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF1A3E128DCCE7E00CA10DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF1A3EB28DCCE7E00CA10DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFF1A3CB28DCCE7900CA10DE = {
+			isa = PBXGroup;
+			children = (
+				DFF1A3D628DCCE7900CA10DE /* ReactionTimer */,
+				DFF1A3E728DCCE7E00CA10DE /* ReactionTimerTests */,
+				DFF1A3F128DCCE7E00CA10DE /* ReactionTimerUITests */,
+				DFF1A3D528DCCE7900CA10DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFF1A3D528DCCE7900CA10DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFF1A3D428DCCE7900CA10DE /* ReactionTimer.app */,
+				DFF1A3E428DCCE7E00CA10DE /* ReactionTimerTests.xctest */,
+				DFF1A3EE28DCCE7E00CA10DE /* ReactionTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFF1A3D628DCCE7900CA10DE /* ReactionTimer */ = {
+			isa = PBXGroup;
+			children = (
+				DFF1A3D728DCCE7900CA10DE /* ReactionTimerApp.swift */,
+				DFF1A3D928DCCE7900CA10DE /* ContentView.swift */,
+				DFF1A3DB28DCCE7D00CA10DE /* Assets.xcassets */,
+				DFF1A3DD28DCCE7D00CA10DE /* Preview Content */,
+			);
+			path = ReactionTimer;
+			sourceTree = "<group>";
+		};
+		DFF1A3DD28DCCE7D00CA10DE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DFF1A3DE28DCCE7D00CA10DE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFF1A3E728DCCE7E00CA10DE /* ReactionTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFF1A3E828DCCE7E00CA10DE /* ReactionTimerTests.swift */,
+			);
+			path = ReactionTimerTests;
+			sourceTree = "<group>";
+		};
+		DFF1A3F128DCCE7E00CA10DE /* ReactionTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFF1A3F228DCCE7E00CA10DE /* ReactionTimerUITests.swift */,
+				DFF1A3F428DCCE7E00CA10DE /* ReactionTimerUITestsLaunchTests.swift */,
+			);
+			path = ReactionTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFF1A3D328DCCE7900CA10DE /* ReactionTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF1A3F828DCCE7E00CA10DE /* Build configuration list for PBXNativeTarget "ReactionTimer" */;
+			buildPhases = (
+				DFF1A3D028DCCE7900CA10DE /* Sources */,
+				DFF1A3D128DCCE7900CA10DE /* Frameworks */,
+				DFF1A3D228DCCE7900CA10DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactionTimer;
+			productName = ReactionTimer;
+			productReference = DFF1A3D428DCCE7900CA10DE /* ReactionTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFF1A3E328DCCE7E00CA10DE /* ReactionTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF1A3FB28DCCE7E00CA10DE /* Build configuration list for PBXNativeTarget "ReactionTimerTests" */;
+			buildPhases = (
+				DFF1A3E028DCCE7E00CA10DE /* Sources */,
+				DFF1A3E128DCCE7E00CA10DE /* Frameworks */,
+				DFF1A3E228DCCE7E00CA10DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFF1A3E628DCCE7E00CA10DE /* PBXTargetDependency */,
+			);
+			name = ReactionTimerTests;
+			productName = ReactionTimerTests;
+			productReference = DFF1A3E428DCCE7E00CA10DE /* ReactionTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DFF1A3ED28DCCE7E00CA10DE /* ReactionTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF1A3FE28DCCE7E00CA10DE /* Build configuration list for PBXNativeTarget "ReactionTimerUITests" */;
+			buildPhases = (
+				DFF1A3EA28DCCE7E00CA10DE /* Sources */,
+				DFF1A3EB28DCCE7E00CA10DE /* Frameworks */,
+				DFF1A3EC28DCCE7E00CA10DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFF1A3F028DCCE7E00CA10DE /* PBXTargetDependency */,
+			);
+			name = ReactionTimerUITests;
+			productName = ReactionTimerUITests;
+			productReference = DFF1A3EE28DCCE7E00CA10DE /* ReactionTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFF1A3CC28DCCE7900CA10DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					DFF1A3D328DCCE7900CA10DE = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					DFF1A3E328DCCE7E00CA10DE = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = DFF1A3D328DCCE7900CA10DE;
+					};
+					DFF1A3ED28DCCE7E00CA10DE = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = DFF1A3D328DCCE7900CA10DE;
+					};
+				};
+			};
+			buildConfigurationList = DFF1A3CF28DCCE7900CA10DE /* Build configuration list for PBXProject "ReactionTimer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFF1A3CB28DCCE7900CA10DE;
+			productRefGroup = DFF1A3D528DCCE7900CA10DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFF1A3D328DCCE7900CA10DE /* ReactionTimer */,
+				DFF1A3E328DCCE7E00CA10DE /* ReactionTimerTests */,
+				DFF1A3ED28DCCE7E00CA10DE /* ReactionTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFF1A3D228DCCE7900CA10DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF1A3DF28DCCE7D00CA10DE /* Preview Assets.xcassets in Resources */,
+				DFF1A3DC28DCCE7D00CA10DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF1A3E228DCCE7E00CA10DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF1A3EC28DCCE7E00CA10DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFF1A3D028DCCE7900CA10DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF1A3DA28DCCE7900CA10DE /* ContentView.swift in Sources */,
+				DFF1A3D828DCCE7900CA10DE /* ReactionTimerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF1A3E028DCCE7E00CA10DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF1A3E928DCCE7E00CA10DE /* ReactionTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF1A3EA28DCCE7E00CA10DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF1A3F328DCCE7E00CA10DE /* ReactionTimerUITests.swift in Sources */,
+				DFF1A3F528DCCE7E00CA10DE /* ReactionTimerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFF1A3E628DCCE7E00CA10DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFF1A3D328DCCE7900CA10DE /* ReactionTimer */;
+			targetProxy = DFF1A3E528DCCE7E00CA10DE /* PBXContainerItemProxy */;
+		};
+		DFF1A3F028DCCE7E00CA10DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFF1A3D328DCCE7900CA10DE /* ReactionTimer */;
+			targetProxy = DFF1A3EF28DCCE7E00CA10DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DFF1A3F628DCCE7E00CA10DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFF1A3F728DCCE7E00CA10DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFF1A3F928DCCE7E00CA10DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ReactionTimer/Preview Content\"";
+				DEVELOPMENT_TEAM = 354PQ96KS3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susin.matheus.ReactionTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFF1A3FA28DCCE7E00CA10DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ReactionTimer/Preview Content\"";
+				DEVELOPMENT_TEAM = 354PQ96KS3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susin.matheus.ReactionTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DFF1A3FC28DCCE7E00CA10DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 354PQ96KS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susin.matheus.ReactionTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactionTimer.app/ReactionTimer";
+			};
+			name = Debug;
+		};
+		DFF1A3FD28DCCE7E00CA10DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 354PQ96KS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susin.matheus.ReactionTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactionTimer.app/ReactionTimer";
+			};
+			name = Release;
+		};
+		DFF1A3FF28DCCE7E00CA10DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 354PQ96KS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susin.matheus.ReactionTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReactionTimer;
+			};
+			name = Debug;
+		};
+		DFF1A40028DCCE7E00CA10DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 354PQ96KS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susin.matheus.ReactionTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReactionTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFF1A3CF28DCCE7900CA10DE /* Build configuration list for PBXProject "ReactionTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF1A3F628DCCE7E00CA10DE /* Debug */,
+				DFF1A3F728DCCE7E00CA10DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF1A3F828DCCE7E00CA10DE /* Build configuration list for PBXNativeTarget "ReactionTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF1A3F928DCCE7E00CA10DE /* Debug */,
+				DFF1A3FA28DCCE7E00CA10DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF1A3FB28DCCE7E00CA10DE /* Build configuration list for PBXNativeTarget "ReactionTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF1A3FC28DCCE7E00CA10DE /* Debug */,
+				DFF1A3FD28DCCE7E00CA10DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF1A3FE28DCCE7E00CA10DE /* Build configuration list for PBXNativeTarget "ReactionTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF1A3FF28DCCE7E00CA10DE /* Debug */,
+				DFF1A40028DCCE7E00CA10DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFF1A3CC28DCCE7900CA10DE /* Project object */;
+}

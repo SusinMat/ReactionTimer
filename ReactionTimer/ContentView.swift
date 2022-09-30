@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var testIsOngoing: Bool = false
-    @State var numberOfButtons: Int = 1
+    @State var numberOfButtons: Int = 8
 
-    let buttonRange = 1...8
+    let maxItemsPerRow = 2
+    let maxRows = 4
+    var buttonRange: ClosedRange<Int> { 1...(maxItemsPerRow * maxRows) }
     let topStackHeight = 60.0
 
     var body: some View {
@@ -19,13 +21,35 @@ struct ContentView: View {
             Spacer().frame(height: 4.0)
             HStack {
                 minusButton
-                    .disabled(numberOfButtons <= buttonRange.lowerBound)
+                    .disabled(testIsOngoing || numberOfButtons <= buttonRange.lowerBound)
                 startButton
                 plusButton
-                    .disabled(numberOfButtons >= buttonRange.upperBound)
+                    .disabled(testIsOngoing || numberOfButtons >= buttonRange.upperBound)
             }
             .padding(.horizontal, 6.0)
-            Spacer().frame(minWidth: .zero)
+            grid
+                .frame(minHeight: 0, maxHeight: .infinity)
+                .padding(.horizontal, 6.0)
+                .padding(.vertical, 4.0)
+        }
+    }
+}
+
+
+extension ContentView {
+    var grid: some View {
+        VStack {
+            ForEach(Array(0..<maxRows).map({ [$0, numberOfButtons] }), id: \.self) { rowNumber in
+                HStack {
+                    ForEach(Array(0..<maxItemsPerRow).map({ [$0, numberOfButtons] }), id: \.self) { itemInRow in
+                        let itemID = rowNumber[0] * maxItemsPerRow + itemInRow[0]
+                        ReactionItem(enabled: itemID < numberOfButtons)
+                            .frame(minWidth: 0,
+                                   maxWidth: .infinity)
+                    }
+                }
+            }
+            .padding(.vertical, 0.5)
         }
     }
 }

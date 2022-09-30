@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF4823A928E7358800130CEB /* Morphology+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4823A828E7358800130CEB /* Morphology+Extensions.swift */; };
+		DF4823AB28E749D400130CEB /* ReactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4823AA28E749D300130CEB /* ReactionItem.swift */; };
 		DFF1A3D828DCCE7900CA10DE /* ReactionTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3D728DCCE7900CA10DE /* ReactionTimerApp.swift */; };
 		DFF1A3DA28DCCE7900CA10DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1A3D928DCCE7900CA10DE /* ContentView.swift */; };
 		DFF1A3DC28DCCE7D00CA10DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF1A3DB28DCCE7D00CA10DE /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		DF4823A828E7358800130CEB /* Morphology+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Morphology+Extensions.swift"; sourceTree = "<group>"; };
+		DF4823AA28E749D300130CEB /* ReactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionItem.swift; sourceTree = "<group>"; };
 		DFF1A3D428DCCE7900CA10DE /* ReactionTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactionTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF1A3D728DCCE7900CA10DE /* ReactionTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTimerApp.swift; sourceTree = "<group>"; };
 		DFF1A3D928DCCE7900CA10DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				DFF1A3D728DCCE7900CA10DE /* ReactionTimerApp.swift */,
 				DFF1A3D928DCCE7900CA10DE /* ContentView.swift */,
+				DF4823AA28E749D300130CEB /* ReactionItem.swift */,
 				DF4823A828E7358800130CEB /* Morphology+Extensions.swift */,
 				DFF1A3DB28DCCE7D00CA10DE /* Assets.xcassets */,
 				DFF1A3DD28DCCE7D00CA10DE /* Preview Content */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF1A3DA28DCCE7900CA10DE /* ContentView.swift in Sources */,
+				DF4823AB28E749D400130CEB /* ReactionItem.swift in Sources */,
 				DF4823A928E7358800130CEB /* Morphology+Extensions.swift in Sources */,
 				DFF1A3D828DCCE7900CA10DE /* ReactionTimerApp.swift in Sources */,
 			);

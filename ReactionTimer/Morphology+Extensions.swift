@@ -1,5 +1,5 @@
 //
-//  GrammaticalNumber+Extensions.swift
+//  Morphology+Extensions.swift
 //  ReactionTimer
 //
 //  Created by Matheus Martins Susin on 2022-09-30.
@@ -15,5 +15,12 @@ extension Morphology.GrammaticalNumber {
         default:
             self = Morphology.GrammaticalNumber.plural
         }
+    }
+}
+
+extension Morphology {
+    init(number: GrammaticalNumber) {
+        self.init()
+        self.number = number
     }
 }

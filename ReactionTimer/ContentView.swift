@@ -36,8 +36,7 @@ extension ContentView {
         if testIsOngoing {
             return "Stop"
         } else {
-            var morphology = Morphology()
-            morphology.number = .init(count: numberOfButtons)
+            let morphology = Morphology(number: .init(count: numberOfButtons))
             var string = AttributedString("(\(numberOfButtons) button)")
             string.inflect = .explicit(morphology)
             return "Start " + string.inflected()

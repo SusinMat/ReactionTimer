@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var testIsOngoing: Bool = false
-    @State var numberOfButtons: Int = 8
+    @State var numberOfButtons: Int = 4
 
     let maxItemsPerRow = 2
     let maxRows = 4

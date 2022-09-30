@@ -16,7 +16,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Spacer().frame(height: 16.0)
+            Spacer().frame(height: 4.0)
             HStack {
                 minusButton
                     .disabled(numberOfButtons <= buttonRange.lowerBound)
@@ -24,7 +24,7 @@ struct ContentView: View {
                 plusButton
                     .disabled(numberOfButtons >= buttonRange.upperBound)
             }
-            .padding(.horizontal, 4.0)
+            .padding(.horizontal, 6.0)
             Spacer().frame(minWidth: .zero)
         }
     }
@@ -74,9 +74,15 @@ extension ContentView {
                 action()
             } label: {
                 Text(textString)
-                    .font(.system(size: 28.0))
-                    .padding(.horizontal, 4.0)
+                    .font(.system(size: 32.0))
+                    .padding(.horizontal, 6.0)
+                    .frame(alignment: .center)
+                    .padding(.bottom, 4.0)
             }
+            .overlay(
+                Circle()
+                    .stroke(Color.accentColor, lineWidth: 2.0)
+            )
         }
     }
 

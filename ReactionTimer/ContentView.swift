@@ -37,7 +37,7 @@ extension ContentView {
             return "Stop"
         } else {
             var morphology = Morphology()
-            morphology.number = numberOfButtons == 1 ? .singular : .plural
+            morphology.number = .init(count: numberOfButtons)
             var string = AttributedString("Start (\(numberOfButtons) button)")
             string.inflect = .explicit(morphology)
             return string.inflected()

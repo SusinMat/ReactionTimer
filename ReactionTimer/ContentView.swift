@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var testIsOngoing: Bool = false
     @State var numberOfButtons: Int = 1
 
+    let buttonRange = 1...8
     let topStackHeight = 60.0
 
     var body: some View {
@@ -18,8 +19,10 @@ struct ContentView: View {
             Spacer().frame(height: 16.0)
             HStack {
                 minusButton
+                    .disabled(numberOfButtons <= buttonRange.lowerBound)
                 startButton
                 plusButton
+                    .disabled(numberOfButtons >= buttonRange.upperBound)
             }
             .padding(.horizontal, 4.0)
             Spacer().frame(minWidth: .zero)
@@ -43,11 +46,7 @@ extension ContentView {
 
     var startButton: some View {
         Button {
-            if testIsOngoing {
-                testIsOngoing = false
-            } else {
-                testIsOngoing = true
-            }
+            testIsOngoing.toggle()
         } label: {
             Text(buttonText)
                 .font(.system(size: 24.0))
@@ -83,7 +82,7 @@ extension ContentView {
 
     var minusButton: some View {
         IncrementButton("-") {
-            if numberOfButtons > 1 {
+            if numberOfButtons > buttonRange.lowerBound {
                 numberOfButtons -= 1
             }
         }
@@ -91,7 +90,7 @@ extension ContentView {
 
     var plusButton: some View {
         IncrementButton("+") {
-            if numberOfButtons < 8 {
+            if numberOfButtons < buttonRange.upperBound {
                 numberOfButtons += 1
             }
         }

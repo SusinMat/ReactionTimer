@@ -35,15 +35,28 @@ struct ContentView: View {
     }
 }
 
-
+// MARK: - Grid
 extension ContentView {
+    struct ReactionItemModel: Hashable {
+        let index: Int
+        let enabled: Bool
+    }
+
+    var reactionItemModels: [[ReactionItemModel]] {
+        return (0..<maxRows).map { rowNumber -> [ReactionItemModel] in
+            return (0..<maxItemsPerRow).map { itemInRow -> ReactionItemModel in
+                let itemID = rowNumber * maxItemsPerRow + itemInRow
+                return ReactionItemModel(index: itemID, enabled: itemID < numberOfButtons)
+            }
+        }
+    }
+
     var grid: some View {
         VStack {
-            ForEach(Array(0..<maxRows).map({ [$0, numberOfButtons] }), id: \.self) { rowNumber in
+            ForEach(reactionItemModels, id: \.self) { row in
                 HStack {
-                    ForEach(Array(0..<maxItemsPerRow).map({ [$0, numberOfButtons] }), id: \.self) { itemInRow in
-                        let itemID = rowNumber[0] * maxItemsPerRow + itemInRow[0]
-                        ReactionItem(enabled: itemID < numberOfButtons)
+                    ForEach(row, id: \.self) { itemInRow in
+                        ReactionItem(enabled: itemInRow.enabled)
                             .frame(minWidth: 0,
                                    maxWidth: .infinity)
                     }

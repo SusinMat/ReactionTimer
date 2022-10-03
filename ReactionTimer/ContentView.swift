@@ -5,11 +5,14 @@
 //  Created by Matheus Martins Susin on 2022-09-22.
 //
 
+import Combine
 import SwiftUI
 
 struct ContentView: View {
     @State var testIsOngoing: Bool = false
-    @State var numberOfButtons: Int = 4
+    @State var numberOfButtons: Int = 1
+
+    var passthroughSubject = PassthroughSubject<TimerControl, Error>()
 
     let maxItemsPerRow = 2
     let maxRows = 4
@@ -56,7 +59,7 @@ extension ContentView {
             ForEach(reactionItemModels, id: \.self) { row in
                 HStack {
                     ForEach(row, id: \.self) { itemInRow in
-                        ReactionItem(enabled: itemInRow.enabled)
+                        ReactionItem(enabled: itemInRow.enabled, passthroughSubject: passthroughSubject)
                             .frame(minWidth: 0,
                                    maxWidth: .infinity)
                     }
@@ -67,22 +70,29 @@ extension ContentView {
     }
 }
 
+// MARK: - Timer Control
+enum TimerControl {
+    case start
+    case stop
+}
+
 // MARK: - Start/Stop Button
 extension ContentView {
-    var buttonText: AttributedString {
+    var buttonText: LocalizedStringKey {
         if testIsOngoing {
             return "Stop"
-        } else {
-            let morphology = Morphology(number: .init(count: numberOfButtons))
-            var string = AttributedString("(\(numberOfButtons) button)")
-            string.inflect = .explicit(morphology)
-            return "Start " + string.inflected()
         }
+        return "Start (^[\(numberOfButtons) ^[button](morphology: { partOfSpeech: \"noun\" })](inflect: true))"
     }
 
     var startButton: some View {
         Button {
             testIsOngoing.toggle()
+            if testIsOngoing {
+                passthroughSubject.send(.start)
+            } else {
+                passthroughSubject.send(.stop)
+            }
         } label: {
             Text(buttonText)
                 .font(.system(size: 24.0))

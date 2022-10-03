@@ -26,7 +26,7 @@ struct ContentView: View {
                 plusButton
                     .disabled(testIsOngoing || numberOfButtons >= buttonRange.upperBound)
             }
-            .padding(.horizontal, 6.0)
+            .padding(.horizontal, 10.0)
             grid
                 .frame(minHeight: 0, maxHeight: .infinity)
                 .padding(.horizontal, 6.0)
@@ -110,7 +110,7 @@ extension ContentView {
                 action()
             } label: {
                 Text(textString)
-                    .font(.system(size: 32.0))
+                    .font(Font(UIFont.monospacedSystemFont(ofSize: 32.0, weight: .regular)))
                     .padding(.horizontal, 6.0)
                     .frame(alignment: .center)
                     .padding(.bottom, 4.0)

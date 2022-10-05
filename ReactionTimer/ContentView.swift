@@ -8,16 +8,23 @@
 import Combine
 import SwiftUI
 
+typealias StartStopButtonPublisher = PassthroughSubject<TimerControl, Error>
+
 struct ContentView: View {
     @State var testIsOngoing: Bool = false
     @State var numberOfButtons: Int = 1
 
-    var passthroughSubject = PassthroughSubject<TimerControl, Error>()
+    var passthroughSubject = StartStopButtonPublisher()
 
     let maxItemsPerRow = 2
     let maxRows = 4
     var buttonRange: ClosedRange<Int> { 1...(maxItemsPerRow * maxRows) }
     let topStackHeight = 60.0
+
+    var timerMaxDuration: TimeInterval { return Double(numberOfButtons) * maxGracePeriod + endDelay }
+    let minGracePeriod = 0.750
+    let maxGracePeriod = 1.000
+    let endDelay = 1.0
 
     var body: some View {
         VStack {

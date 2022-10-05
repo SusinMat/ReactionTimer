@@ -29,10 +29,28 @@ struct ReactionItem: View {
         return "\(numberString) ms"
     }
 
-    @StateObject var timerInfo: TimerInfo = TimerInfo()
-    var passthroughSubject: PassthroughSubject<TimerControl, Error>?
+    enum ButtonState {
+        case standBy
+        case ready
+        case depressed
+    }
 
-    init(enabled: Bool, passthroughSubject: PassthroughSubject<TimerControl, Error>?) {
+    var buttonColor: Color {
+        let buttonState = timerInfo.buttonState
+        switch buttonState {
+        case .standBy:
+            return .red
+        case .ready:
+            return .green
+        case .depressed:
+            return .gray
+        }
+    }
+
+    @StateObject var timerInfo: TimerInfo = TimerInfo()
+    var passthroughSubject: StartStopButtonPublisher?
+
+    init(enabled: Bool, passthroughSubject: StartStopButtonPublisher?) {
         self.enabled = enabled
         self.passthroughSubject = passthroughSubject
     }
@@ -47,7 +65,7 @@ struct ReactionItem: View {
             Button {
                 print("Button tapped!")
             } label : {
-                Circle().foregroundColor(.red)
+                Circle().foregroundColor(buttonColor)
             }
             .frame(minWidth: 0, maxWidth: .infinity)
             Text(lastResponseTimeString)
@@ -72,11 +90,12 @@ extension ReactionItem {
         var timer: Timer? = nil
         @Published var timerStartTime: TimeInterval? = nil
         @Published var timerEndTime: TimeInterval? = nil
+        @Published var buttonState: ButtonState = .depressed
 
-        var passthroughSubject: PassthroughSubject<TimerControl, Error>? = nil
+        var passthroughSubject: StartStopButtonPublisher? = nil
         var cancellables: Set<AnyCancellable> = []
 
-        func setUpSink(passthroughSubject newPassthroughSubject: PassthroughSubject<TimerControl, Error>?) {
+        func setUpSink(passthroughSubject newPassthroughSubject: StartStopButtonPublisher?) {
             passthroughSubject = newPassthroughSubject
             if passthroughSubject != nil {
                 print("Sink set up!")
@@ -84,22 +103,25 @@ extension ReactionItem {
                 print("Failed to set up sink.")
             }
             let typeName = type(of: self)
-            passthroughSubject?.sink { (completion) in
+            passthroughSubject?.sink { [weak self] (completion) in
                 switch completion {
                 case .finished:
                     print("Finished!")
                 case .failure(let error):
                     print("Error received via Passthrough Subject in \(typeName): \(error)")
                 }
+                self?.buttonState = .depressed
             } receiveValue: { [weak self] (value) in
                 switch value {
                 case .start:
                     print("Timer started.")
                     self?.timerEndTime = nil
                     self?.timerStartTime = Date().timeIntervalSince1970
+                    self?.buttonState = .standBy
                 case .stop:
                     print("Timer ended.")
                     self?.timerEndTime = Date().timeIntervalSince1970
+                    self?.buttonState = .depressed
                 }
             }.store(in: &cancellables)
         }
